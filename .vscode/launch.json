@@ -1,4 +1,24 @@
 {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "main.cpp",
+                "common_prefix.cpp",
+                "-o",
+                "output_name"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ],
     "configurations": [
         {
             "name": "C/C++: gcc.exe build and debug active file",
@@ -26,6 +46,5 @@
             ],
             "preLaunchTask": "C/C++: gcc.exe build active file"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
