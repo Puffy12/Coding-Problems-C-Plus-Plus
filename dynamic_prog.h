@@ -20,5 +20,17 @@ int removeDuplicates2(vector<int>& nums);
 int majorityElement(vector<int>& nums);
 void rotate(vector<int>& nums, int k);
 
+int maxProfit(vector<int>& prices);
+int maxProfit2(vector<int>& prices);
+
+bool canJump(vector<int>& nums);
+int jump(vector<int>& nums);
+
+vector<int> twoSum(vector<int>& nums, int target);
+int hIndex(vector<int>& citations);
+
+vector<int> productExceptSelf(vector<int>& nums);
+int romanToInt(string s);
+
 
 #endif // DYNAMIC_PROG_H

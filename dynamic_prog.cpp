@@ -211,3 +211,135 @@ void rotate(vector<int>& nums, int k) {
 */
 
 
+int maxProfit(vector<int>& prices) {
+    int profit = 0;
+    for(int i=1;i<prices.size();i++) {
+        if(prices[i] > prices[i-1]) {
+            profit += prices[i] - prices[i-1];
+        }
+    }
+    return profit;
+}
+
+int maxProfit2(vector<int>& prices) {
+    int min = 9999999999999999,max = 0;
+    for(int i = 0; i < prices.size();i++){
+        if(prices[i] < min){
+            min = prices[i];
+        }else if( (prices[i] - min) > max ){
+            max = (prices[i] - min);
+        }
+    }
+
+    return max;
+}
+
+
+bool canJump(vector<int>& nums) {
+    int reach = 0; 
+    for(int i = 0; i < nums.size(); i++) {
+
+        if(reach < i){return false;};
+
+        reach = max(reach, (i + nums[i]) );
+    
+    }
+    
+    return true;
+    
+}
+//at every index I'll check if my reach was atleast able to 
+//reach that particular index.
+
+//reach >= idx -> great, carry on. Otherwise, 
+
+//now as you can reach this index, it's time to update your reach
+//as at every index, you're getting a new jump length.
+
+int jump(vector<int>& nums) {
+    int res = 0; 
+    int l = 0, r = 0;
+    while(r < (nums.size() - 1)){
+        int furthest = 0;
+        for(int i = l; i < (r + 1); i++){
+            furthest = max(furthest, (i + nums[i]) );
+        }
+        l = (r + 1);
+        r = furthest;
+        res++;
+    }
+    
+    return res;
+}
+
+
+
+vector<int> twoSum(vector<int>& nums, int target) {
+    unordered_map<int, int> map;
+
+    for(int i = 0; i < nums.size();i++){
+        int comp = target - nums[i];
+        if(map.count(comp)){
+            return {map[comp],i};
+        }
+        map[nums[i]] = i;
+    }
+    return {}; 
+}
+
+int hIndex(vector<int>& citations) {
+    sort(citations.begin(),citations.end());
+    int n = citations.size(),i;
+    for(i = 1; i <= n; i++){
+        if(i > citations[n-i]){
+            break;
+        }
+    }
+    return i-1;
+}
+
+vector<int> productExceptSelf(vector<int>& nums) {
+    
+    int prod = 1,post = 1, n = nums.size(),reverse;
+    vector<int> ans(n,1);
+    //itterates through the array from both sides so you dont need two for loops 
+    for(int i = 0; i < n; i++){
+        ans[i] *= prod;
+        prod *= nums[i];
+        reverse = n - i - 1;
+        ans[reverse] *= post;
+        post *=  nums[reverse];
+        
+    }
+        
+    return ans;
+}
+/* for(int i = 0; i < n; i++){ start to end 
+    ans[i] *= prod;
+    prod *= nums[i]; 
+}
+for(int j = n - 1; j >= 0; j--){ end to start
+    ans[j] *= post;
+    post *=  nums[j];
+}        */ 
+
+
+int romanToInt(string s) {
+    int ans = 0, prev = 0, current;
+    unordered_map<char, int> map = {
+        {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50},
+        {'C', 100}, {'D', 500}, {'M', 1000}
+    };
+
+    for (char& c : s) {
+        current = map[c];
+        
+        if (current > prev) {
+            ans += current - (2 * prev);  // Subtract twice the previous value.
+        } else {
+            ans += current;  // Otherwise, add the current value to the answer.
+        }
+        prev = current;  // Update the previous value for the next iteration.
+    }
+    return ans;
+}

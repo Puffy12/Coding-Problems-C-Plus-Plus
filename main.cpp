@@ -4,6 +4,7 @@
 #include <vector>
 #include <bits/stdc++.h> 
 #include "dynamic_prog.h"
+#include "linkedlist.h"
 using namespace std;
 
 
@@ -82,5 +83,58 @@ Test dynamic_prog -> rotate(vector<int>& nums, int k)
         cout << i << ' ';
     }
 
+Test dynamic_prog -> int maxProfit(vector<int>& prices) /2
+    7,6,4,3,1  1,2,3,4,5
+    vector<int> nums = {7,1,5,3,6,4};
+
+    cout << maxProfit(nums) << endl;
+
+Test dynamic_prog -> bool canJump(vector<int>& nums)
+                  -> int jump(vector<int>& nums);
+
+    2,3,0,1,4  3,2,1,0,4
+    vector<int> nums = {2,3,1,1,4};
+    cout << canJump(nums) << endl;
+    cout << jump(nums) << endl;
+
+
+Test dynamic_prog -> vector<int> twoSum(vector<int>& nums, int target)
+    3,2,4  6 
+    3,3  6
+    int target = 9;
+    vector<int> nums = {2,7,11,15};
+    nums = twoSum(nums,target);
+    for (int i: nums){
+        cout << i << ' ';
+    }
+    
+Test dynamic_prog -> int hIndex(vector<int>& citations)
+    vector<int> nums = {3,0,6,1,5};
+    1,3,1
+
+    cout << hIndex(nums) << endl;
+
+Test dynamic_prog -> vector<int> productExceptSelf(vector<int>& nums)
+    -1,1,0,-3,3
+    vector<int> nums = {1,2,3,4};
+
+    nums = productExceptSelf(nums);
+    for (int i: nums){
+        cout << i << ' ';
+    }
+
+Test dynamic_prog -> int romanToInt(string s)
+    "LVIII" "MCMXCIV"
+    string s = "III";
+    cout << romanToInt(s) << endl;
+
+Test dynamic_prog -> int lengthOfLastWord(string s)
+
+
+Test dynamic_prog -> string longestCommonPrefix(vector<string>& strs) 
+
 
 */
+
+
+
