@@ -1,5 +1,5 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
+#ifndef POINTERS_LINKED_H
+#define POINTERS_LINKED_H
 
 #include <unordered_map>
 #include <iostream>
@@ -11,4 +11,4 @@ using namespace std;
 
 
 
-#endif // LINKEDLIST_H
+#endif // POINTERS_LINKED_H

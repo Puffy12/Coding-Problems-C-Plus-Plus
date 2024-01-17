@@ -31,6 +31,8 @@ int hIndex(vector<int>& citations);
 
 vector<int> productExceptSelf(vector<int>& nums);
 int romanToInt(string s);
+int strStr(string haystack, string needle);
 
+bool isPalindrome(string s);
 
 #endif // DYNAMIC_PROG_H

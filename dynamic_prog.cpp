@@ -222,7 +222,7 @@ int maxProfit(vector<int>& prices) {
 }
 
 int maxProfit2(vector<int>& prices) {
-    int min = 9999999999999999,max = 0;
+    int min = 9999999,max = 0;
     for(int i = 0; i < prices.size();i++){
         if(prices[i] < min){
             min = prices[i];
@@ -342,4 +342,47 @@ int romanToInt(string s) {
         prev = current;  // Update the previous value for the next iteration.
     }
     return ans;
+}
+
+
+int strStr(string haystack, string needle) {
+    return haystack.find(needle);
+}
+/*  int strStr(string haystack, string needle) { og answer
+        int n = haystack.length(), m = needle.length(), j;
+        char first = needle[0], last = needle[m - 1];
+        for(int i = 0; i < (n - m); i++ ){
+            if( (haystack[i] == first) && (haystack[m + i - 1] == last)){
+                bool t = true;
+                int temp = 0;
+                for(j = i + 1; j < m; j++){
+                    temp++;
+                    if(haystack[j] != needle[temp]){
+                        t = false;
+                    }
+                }
+                if(t == true){
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }*/
+
+
+bool isPalindrome(string s) {
+    string word;
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] < 'A' || s[i] > 'Z' && s[i] < 'a' || s[i] > 'z') {
+            s.erase(i, 1);
+            i--;
+        }else{
+            word += putchar(tolower(s[i]));
+        }
+
+    }
+    string temp = word;
+    reverse(word.begin(), word.end());
+    cout << s << " " << temp << endl;
+    return (temp == word);
 }

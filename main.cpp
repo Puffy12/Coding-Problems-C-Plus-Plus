@@ -4,12 +4,13 @@
 #include <vector>
 #include <bits/stdc++.h> 
 #include "dynamic_prog.h"
-#include "linkedlist.h"
+#include "pointers_linked.h"
 using namespace std;
 
-
-
 int main() {
+
+    string s = "A man, a plan, a canal: Panama";
+    cout << isPalindrome(s) << endl;
     
     vector<int> nums = {1,2,3,4,5,6,7};
     int k = 3;
@@ -22,14 +23,15 @@ int main() {
 }
 
 /*
-Test dynamic_prog -> longestCommonPrefix(vector<string>& strs)
-    //"dog","racecar","car"
-    vector<int> strs = {"flower","flow","flight"};
-    cout << longestCommonPrefix(strs) << endl;; 
+Test dynamic_prog -> int lengthOfLastWord(string s)
+    "   fly me   to   the moon  " ,  "luffy is still joyboy"
+    string s = "Hello World"
+    cout << lengthOfLastWord(s) << endl;
 
-Test dynamic_prog -> lengthOfLastWord(string s)
-    "   fly me   to   the moon  " "Hello World"
-    cout << lengthOfLastWord("luffy is still joyboy") << endl;
+Test dynamic_prog -> string longestCommonPrefix(vector<string>& strs) 
+    "dog","racecar","car"
+    vector<string> nums = {"flower","flow","flight"};
+    cout << longestCommonPrefix(nums) << endl;
 
 Test dynamic_prog -> removeElement(vector<int>& nums, int val)
     vector<int> nums = {0,1,2,2,3,0,4,2};
@@ -128,10 +130,16 @@ Test dynamic_prog -> int romanToInt(string s)
     string s = "III";
     cout << romanToInt(s) << endl;
 
-Test dynamic_prog -> int lengthOfLastWord(string s)
+Test dynamic_prog -> int strStr(string haystack, string needle)
+    haystack = "leetcode", needle = "leeto"
+    string haystack = "sadbutsad", needle = "sad";
+    cout << strStr(haystack,needle) << endl;
 
 
-Test dynamic_prog -> string longestCommonPrefix(vector<string>& strs) 
+Test dynamic_prog -> bool isPalindrome(string s);
+    "race a car" , " " 
+    string s = "A man, a plan, a canal: Panama";
+    cout << isPalindrome(s) << endl;
 
 
 */
