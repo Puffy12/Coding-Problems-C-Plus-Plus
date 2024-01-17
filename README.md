@@ -57,7 +57,7 @@ Functions:
  * Parameters: std::vector<int>& nums - A reference to a vector representing the jump lengths at each index.
  * Usage Example: canJump({2, 3, 1, 1, 4});
 
-9.jump
+9. jump
  * Description: Calculates the minimum number of jumps required to reach the last index in an array.
  * Parameters: std::vector<int>& nums - A reference to a vector representing the maximum jump lengths at each index.
  * Usage Example: jump({2, 3, 1, 1, 4});
@@ -82,4 +82,12 @@ Functions:
  * Parameters: std::string s - A string representing a Roman numeral.
  * Usage Example: romanToInt("LVIII");
 
+14. strStr
+ * Description: Finds the index of the first occurrence of a substring within a string.
+ * Parameters: string haystack - The main string to search within, string needle - The substring to search for.
+ * Usage Example: strStr("hello", "ll");
 
+15. isPalindrome
+ * Description: Checks if a given string is a palindrome after removing non-alphanumeric characters and ignoring case.
+ * Parameters: std::string s - The input string to check for palindrome.
+ * Usage Example: isPalindrome("A man, a plan, a canal, Panama!");
