@@ -9,6 +9,6 @@
 
 using namespace std;
 
-
+bool isPalindromePointer(string s);
 
 #endif // POINTERS_LINKED_H

@@ -373,10 +373,7 @@ int strStr(string haystack, string needle) {
 bool isPalindrome(string s) {
     string word;
     for (int i = 0; i < s.size(); i++) {
-        if (s[i] < 'A' || s[i] > 'Z' && s[i] < 'a' || s[i] > 'z') {
-            s.erase(i, 1);
-            i--;
-        }else{
+        if ( isalpha(s[i]) || isdigit(s[i]) ) {
             word += putchar(tolower(s[i]));
         }
 

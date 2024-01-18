@@ -10,7 +10,7 @@ using namespace std;
 int main() {
 
     string s = "A man, a plan, a canal: Panama";
-    cout << isPalindrome(s) << endl;
+    cout << isPalindromePointer(s) << endl;
     
     vector<int> nums = {1,2,3,4,5,6,7};
     int k = 3;
