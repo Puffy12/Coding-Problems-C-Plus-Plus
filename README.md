@@ -62,10 +62,11 @@ Functions:
    * Parameters: std::vector<int>& nums - A reference to a vector representing the maximum jump lengths at each index.
    * Usage Example: jump({2, 3, 1, 1, 4});
 
-### 10.twoSum
+### 10.twoSum 
    * Description: Finds the indices of two numbers in a vector that add up to a target value.
    * Parameters: std::vector<int>& nums - A reference to a vector of integers. int target - The target sum.
    * Usage Example: twoSum({2, 7, 11, 15}, 9);
+   *  TwoSum2: This follows the same concept as TwoSum but is tailored for sorted arrays and solves the problem using two pointers.
 
 ### 11. H-Index
    * Description: Calculates the H-index of a researcher based on their citation values.
