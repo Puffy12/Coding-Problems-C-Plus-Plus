@@ -9,7 +9,6 @@
 using namespace std;
 
 int main() {
-
     RandomizedSet randomizedSet;
     cout << randomizedSet.insert(1) << endl;
     cout <<  randomizedSet.remove(2) << endl;
@@ -162,6 +161,15 @@ Test pointers_linked -> bool isSubsequence(string s, string t)
     "axc", t = "ahbgdc"
     string s = "abc", t = "ahbgdc";
     cout << isSubsequence(s,t) << endl;
+
+Test twoSum2 -> vector<int> twoSum(vector<int>& numbers, int target)
+    2,3,4 -> 6 , -1,0 -> -1
+    int target = 9;
+    vector<int> nums = {2,7,11,15};
+    nums = twoSum2(nums,target);
+    for (int i: nums){
+        cout << i << ' ';
+    }
 
 
 */

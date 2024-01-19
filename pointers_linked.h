@@ -11,5 +11,6 @@ using namespace std;
 
 bool isPalindromePointer(string s);
 bool isSubsequence(string s, string t);
+vector<int> twoSum2(vector<int>& numbers, int target);
 
 #endif // POINTERS_LINKED_H

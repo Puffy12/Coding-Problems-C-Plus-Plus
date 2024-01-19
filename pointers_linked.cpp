@@ -38,3 +38,22 @@ bool isSubsequence(string s, string t) {
     return false;
 
 }
+
+//same thing as twosum but the numbers are ordered and I use a two pointer solution
+vector<int> twoSum2(vector<int>& numbers, int target) {
+    int n = numbers.size();
+    int first = 0, last = n - 1;
+
+    while(first < last){
+        int temp = numbers[first] + numbers[last];
+        if( temp == target){
+            return {++first, ++last};
+        }else if(temp > target){
+            last--;
+        }else{
+            first++;
+        }
+
+    }
+    return {};
+}
