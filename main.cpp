@@ -5,9 +5,15 @@
 #include <bits/stdc++.h> 
 #include "dynamic_prog.h"
 #include "pointers_linked.h"
+#include "insert_delete_random.h"
 using namespace std;
 
 int main() {
+
+    RandomizedSet randomizedSet;
+    cout << randomizedSet.insert(1) << endl;
+    cout <<  randomizedSet.remove(2) << endl;
+    cout <<  randomizedSet.getRandom() << endl;
 
     string s = "A man, a plan, a canal: Panama";
     cout << isPalindromePointer(s) << endl;
@@ -146,3 +152,16 @@ Test dynamic_prog -> bool isPalindrome(string s);
 
 
 
+/*
+Test dynamic_prog -> bool isPalindrome(string s);
+    "race a car" , " " 
+    string s = "A man, a plan, a canal: Panama";
+    cout << isPalindrome(s) << endl;
+
+Test pointers_linked -> bool isSubsequence(string s, string t)
+    "axc", t = "ahbgdc"
+    string s = "abc", t = "ahbgdc";
+    cout << isSubsequence(s,t) << endl;
+
+
+*/

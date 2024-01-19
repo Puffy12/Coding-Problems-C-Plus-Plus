@@ -10,5 +10,6 @@
 using namespace std;
 
 bool isPalindromePointer(string s);
+bool isSubsequence(string s, string t);
 
 #endif // POINTERS_LINKED_H
